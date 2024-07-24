@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Galletas Chocolate",
+    "description": "Deliciosas galletas con trozos de chocolate",
+    "code": "choc123",
+    "price": 50,
+    "status": "success",
+    "stock": 100,
+    "category": "comida",
+    "thumbnails": "sin imagen"
+  },
+  {
+    "id": 2,
+    "title": "Jugo de Naranja",
+    "description": "Jugo natural de naranja",
+    "code": "juice456",
+    "price": 30,
+    "status": "success",
+    "stock": 80,
+    "category": "bebida",
+    "thumbnails": "sin imagen"
+  },
+  {
+    "id": 3,
+    "title": "Arroz Integral",
+    "description": "Arroz integral orgánico",
+    "code": "rice789",
+    "price": 25,
+    "status": "success",
+    "stock": 50,
+    "category": "comida",
+    "thumbnails": "sin imagen"
+  },
+  {
+    "id": 4,
+    "title": "Aceite de Oliva",
+    "description": "Aceite de oliva extra virgen",
+    "code": "oil101",
+    "price": 60,
+    "status": "success",
+    "stock": 40,
+    "category": "condimentos",
+    "thumbnails": "sin imagen"
+  }
+]
