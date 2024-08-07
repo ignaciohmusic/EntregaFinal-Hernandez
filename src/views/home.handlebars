@@ -3,9 +3,11 @@
 <div class="div-home">
     {{#each product}}
         <div class="card">
-            <p>{{this.title}}</p>
-            <p>{{this.description}}</p>
-            <p>{{this.price}}</p>
+            <p>Title: {{this.title}}</p>
+            <p>Description: {{this.description}}</p>
+            <p>Price: {{this.price}}</p>
+            <p>Category: {{this.category}}</p>
+            <p>Stock: {{this.stock}}</p>
         </div>
     {{/each}}
 </div>
