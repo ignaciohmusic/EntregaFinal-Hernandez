@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+.div-home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    padding: 1rem;
+}
+
+h2{
+    text-align: center;
+    margin: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin: 0.2rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+select{
+    font-size: 1.2rem;
+}
+
+button{
+    margin: 1rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+#productsContainer{
+    display: flex;
+    align-items: center;
+
+    
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

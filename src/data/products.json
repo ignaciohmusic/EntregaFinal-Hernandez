@@ -42,5 +42,16 @@
     "stock": 40,
     "category": "condimentos",
     "thumbnails": "sin imagen"
+  },
+  {
+    "id": 5,
+    "title": "queso ahuecado",
+    "description": "Queso en rebanadas",
+    "code": "8d3",
+    "price": 35,
+    "status": "success",
+    "stock": 50,
+    "category": "fiambre",
+    "thumbnails": "sin imagen"
   }
 ]
