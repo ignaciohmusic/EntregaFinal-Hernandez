@@ -7,6 +7,7 @@ import { Server } from "socket.io";
 import productsRouter from './routes/products.router.js'; 
 import cartRouter from './routes/cart.router.js';
 import viewsRouter from './routes/views.router.js';
+import "./database.js";
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -26,8 +27,8 @@ const httpServer = app.listen(PUERTO, () => {
 
 const io = new Server(httpServer);
 
-import ProductManager from "./managers/productManager.js";
-const productManager = new ProductManager("./src/data/products.json");
+import ProductManager from "./dao/db/product-manager-db.js";
+const productManager = new ProductManager();
 
 io.on("connection", async (socket) => {
   console.log("Nuevo cliente conectado");

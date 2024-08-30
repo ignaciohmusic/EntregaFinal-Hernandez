@@ -1,0 +1,212 @@
+[
+    {
+        "title": "Galletas Chocolate",
+        "description": "Deliciosas galletas con trozos de chocolate",
+        "code": "choc123",
+        "price": 50,
+        "status": "success",
+        "stock": 100,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Cereal Avena",
+        "description": "Cereal saludable de avena integral",
+        "code": "avena456",
+        "price": 35,
+        "status": "success",
+        "stock": 150,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Pan Integral",
+        "description": "Pan integral fresco con semillas",
+        "code": "pan789",
+        "price": 45,
+        "status": "success",
+        "stock": 80,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Leche Descremada",
+        "description": "Leche descremada sin lactosa",
+        "code": "leche012",
+        "price": 60,
+        "status": "success",
+        "stock": 200,
+        "category": "bebida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Yogur Natural",
+        "description": "Yogur natural sin azúcar",
+        "code": "yogur345",
+        "price": 40,
+        "status": "success",
+        "stock": 120,
+        "category": "bebida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Queso Cheddar",
+        "description": "Queso cheddar madurado",
+        "code": "queso678",
+        "price": 70,
+        "status": "success",
+        "stock": 60,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Jugo Naranja",
+        "description": "Jugo de naranja natural sin azúcar",
+        "code": "jugo901",
+        "price": 30,
+        "status": "success",
+        "stock": 180,
+        "category": "bebida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Café Molido",
+        "description": "Café molido 100% arábica",
+        "code": "cafe234",
+        "price": 80,
+        "status": "success",
+        "stock": 90,
+        "category": "bebida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Té Verde",
+        "description": "Té verde orgánico en bolsitas",
+        "code": "te567",
+        "price": 25,
+        "status": "success",
+        "stock": 140,
+        "category": "bebida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Mantequilla",
+        "description": "Mantequilla sin sal",
+        "code": "mant890",
+        "price": 65,
+        "status": "success",
+        "stock": 50,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Harina Integral",
+        "description": "Harina integral de trigo",
+        "code": "harina123",
+        "price": 55,
+        "status": "success",
+        "stock": 110,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Arroz Basmati",
+        "description": "Arroz basmati de grano largo",
+        "code": "arroz456",
+        "price": 70,
+        "status": "success",
+        "stock": 75,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Aceite de Oliva",
+        "description": "Aceite de oliva extra virgen",
+        "code": "aceite789",
+        "price": 120,
+        "status": "success",
+        "stock": 45,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Vinagre de Manzana",
+        "description": "Vinagre de manzana orgánico",
+        "code": "vinagre012",
+        "price": 50,
+        "status": "success",
+        "stock": 95,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Miel de Abeja",
+        "description": "Miel de abeja pura",
+        "code": "miel345",
+        "price": 85,
+        "status": "success",
+        "stock": 65,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Azúcar Morena",
+        "description": "Azúcar morena sin refinar",
+        "code": "azucar678",
+        "price": 40,
+        "status": "success",
+        "stock": 130,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Pasta Integral",
+        "description": "Pasta integral de trigo duro",
+        "code": "pasta901",
+        "price": 45,
+        "status": "success",
+        "stock": 150,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Salsa de Tomate",
+        "description": "Salsa de tomate natural sin conservantes",
+        "code": "salsa234",
+        "price": 35,
+        "status": "success",
+        "stock": 160,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Chocolate Amargo",
+        "description": "Chocolate amargo 70% cacao",
+        "code": "choco567",
+        "price": 90,
+        "status": "success",
+        "stock": 85,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Galletas Avena",
+        "description": "Galletas saludables de avena",
+        "code": "galletas890",
+        "price": 50,
+        "status": "success",
+        "stock": 100,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Mermelada de Fresa",
+        "description": "Mermelada de fresa sin azúcar añadida",
+        "code": "mermelada123",
+        "price": 60,
+        "status": "success",
+        "stock": 110,
+        "category": "comida",
+        "thumbnails": "sin imagen"
+    }
+]

@@ -1,29 +1,48 @@
 import express from "express";
 import {Router} from "express";
 const router = Router();
-import ProductManager from '../managers/productManager.js'
-const manager = new ProductManager("./src/data/products.json");
+import ProductManager from '../dao/db/product-manager-db.js'
+const manager = new ProductManager();
 
 router.use(express.json());
 
 router.get("/", async (req, res) => {
-  const limit = req.query.limit;
+
   try {
-    const arrayProducts = await manager.getProducts();
-    if (limit) {
-        res.send(arrayProducts.slice(0, limit));
-    } else {
-        res.send(arrayProducts);
-    }
+    const { limit = 10, page = 1, sort, query } = req.query;
+
+    const products = await manager.getProducts({
+        limit: parseInt(limit),
+        page: parseInt(page),
+        sort,
+        query,
+    });
+
+    res.json({
+        status: 'success',
+        payload: products,
+        totalPages: products.totalPages,
+        prevPage: products.prevPage,
+        nextPage: products.nextPage,
+        page: products.page,
+        hasPrevPage: products.hasPrevPage,
+        hasNextPage: products.hasNextPage,
+        prevLink: products.hasPrevPage ? `/api/products?limit=${limit}&page=${products.prevPage}&sort=${sort}&query=${query}` : null,
+        nextLink: products.hasNextPage ? `/api/products?limit=${limit}&page=${products.nextPage}&sort=${sort}&query=${query}` : null,
+    });
   } catch (error) {
-    res.status(500).json({ message: 'Error interno del servidor', error });
+      console.error("Error al obtener productos", error);
+      res.status(500).json({
+          status: 'error',
+          error: "Error interno del servidor"
+      });
   }
-})
+});
 
 router.get("/:pid", async (req, res) => {
-  let id = req.params.pid;
+  const id = req.params.pid;
   try {
-    const product = await manager.getProductById(parseInt(id));
+    const product = await manager.getProductById(id);
     if (!product) {
         res.send("Producto no encontrado");      
     } else {
@@ -45,7 +64,7 @@ router.post("/", async (req, res) => {
 })
 
 router.put("/:pid", async (req, res) => {
-  const id = parseInt(req.params.pid);
+  const id = req.params.pid;
   const { title, description, code, price, status, stock, category, thumbnails } = req.body;
   try {
     const updatedProduct = await manager.updateProduct(id, { title, description, code, price, status, stock, category, thumbnails });
@@ -60,7 +79,7 @@ router.put("/:pid", async (req, res) => {
 });
 
 router.delete("/:pid", async (req, res) => {
-  const id = parseInt(req.params.pid);
+  const id = req.params.pid;
   try {
     await manager.deleteProduct(id);
     res.send("Producto eliminado exitosamente")

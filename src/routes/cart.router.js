@@ -1,7 +1,8 @@
 import { Router } from 'express';
 const router = Router();
-import CartManager from "../managers/cartManager.js";
-const cartManager = new CartManager("./src/data/carts.json");
+import CartManager from "../dao/db/cart-manager-db.js";
+const cartManager = new CartManager();
+import CartModel from '../dao/models/cart.model.js';
 
 router.post("/", async (req, res) => {
     try {
@@ -13,29 +14,34 @@ router.post("/", async (req, res) => {
 })
 
 router.get("/:cid", async (req, res) => {
-    let cartId = parseInt(req.params.cid);
+    const id = req.params.cid;
     try {
-        const cartList = await cartManager.getCartById(cartId);
-        res.json(cartList.products)
+        const cartList = await CartManager.getCartById(id);
+        if(!cartList) {
+            console.log("No existe un carrito con ese id");
+            return res.status(404).json({ error: "Carrito no encontrado" });
+        }
+        return res.json(cartList.products);
     } catch (error) {
         res.status(500).send("Error al obtener los productos del carrito");
-    
     }
 })
 
 router.post("/:cid/products/:pid", async (req, res) => {
-    let cartId = parseInt(req.params.cid);
-    let productId = req.params.pid;
-    let quantity = req.body.quantity || 1;
+    const cartId = req.params.cid;
+    const productId = req.params.pid;
+    const quantity = req.body.quantity || 1;
 
     try {
-        const updated = await cartManager.addProductsToCart(cartId, productId, quantity);
-        res.json(updated.products);
+        const updatedCart = await cartManager.addProductsToCart(cartId, productId, quantity);
+        if (updatedCart) {
+            res.json(updatedCart.products);
+        } else {
+            res.status(404).send("Carrito no encontrado");
+        }
     } catch (error) {
-        res.status(500).send("Error al agregar un producto")
+        res.status(500).send("Error al agregar un producto al carrito");
     }
-})
-
-
+});
 
 export default router;
